@@ -41,42 +41,40 @@ class Home extends StatelessWidget {
                       ],
                     ))),
             Expanded(
-                child: Container(
-                    height: MediaQuery.of(context).size.height,
-                    child: ListView(
-                      children: <Widget>[
-                        RaffleItem(
-                          raffleType: MEGA_SENA,
-                          raffleNumber: "2289",
-                          date: "13/08/2020",
-                          results: MEGA_RESULTS,
-                        ),
-                        RaffleItem(
-                          raffleType: LOTOMANIA,
-                          raffleNumber: "2099",
-                          date: "11/08/2020",
-                          results: LOTOMANIA_RESULTS,
-                        ),
-                        RaffleItem(
-                          raffleType: QUINA,
-                          raffleNumber: "5539",
-                          date: "13/08/2020",
-                          results: QUINA_RESULTS,
-                        ),
-                        RaffleItem(
-                          raffleType: TIMEMANIA,
-                          raffleNumber: "1523",
-                          date: "13/08/2020",
-                          results: TIMEMANIA_RESULTS,
-                        ),
-                        RaffleItem(
-                          raffleType: LOTOFACIL,
-                          raffleNumber: "2289",
-                          date: "13/08/2020",
-                          results: LOTOFACIL_RESULTS,
-                        ),
-                      ],
-                    ))),
+                child: ListView(
+              children: <Widget>[
+                RaffleItem(
+                  raffleType: MEGA_SENA,
+                  raffleNumber: "2289",
+                  date: "13/08/2020",
+                  results: MEGA_RESULTS,
+                ),
+                RaffleItem(
+                  raffleType: LOTOMANIA,
+                  raffleNumber: "2099",
+                  date: "11/08/2020",
+                  results: LOTOMANIA_RESULTS,
+                ),
+                RaffleItem(
+                  raffleType: QUINA,
+                  raffleNumber: "5539",
+                  date: "13/08/2020",
+                  results: QUINA_RESULTS,
+                ),
+                RaffleItem(
+                  raffleType: TIMEMANIA,
+                  raffleNumber: "1523",
+                  date: "13/08/2020",
+                  results: TIMEMANIA_RESULTS,
+                ),
+                RaffleItem(
+                  raffleType: LOTOFACIL,
+                  raffleNumber: "2289",
+                  date: "13/08/2020",
+                  results: LOTOFACIL_RESULTS,
+                ),
+              ],
+            )),
           ],
         ),
       ),
