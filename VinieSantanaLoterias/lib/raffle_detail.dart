@@ -76,9 +76,9 @@ class RaffleDetail extends StatelessWidget {
       ));
     }
     return CustomScaffold(
-      "Resultados do sorteio",
-      Color(barColor),
-      Column(
+      title: "Resultados do sorteio",
+      barColor: Color(barColor),
+      child: Column(
         children: [
           Image.asset(logo),
           Padding(

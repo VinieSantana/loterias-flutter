@@ -15,9 +15,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return CustomScaffold(
-      "Últimos Resultados",
-      null,
-      Container(
+      title: "Últimos Resultados",
+      barColor: null,
+      child: Container(
         child: Column(
           children: [
             Container(
