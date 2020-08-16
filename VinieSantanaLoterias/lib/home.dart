@@ -1,3 +1,4 @@
+import 'package:VinieSantanaLoterias/custom_scaffold.dart';
 import 'package:VinieSantanaLoterias/raffle_detail.dart';
 import 'package:flutter/material.dart';
 
@@ -13,11 +14,10 @@ class Home extends StatelessWidget {
   Home(this.name, this.city);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Últimos Resultados"),
-      ),
-      body: Container(
+    return CustomScaffold(
+      "Últimos Resultados",
+      null,
+      Container(
         child: Column(
           children: [
             Container(
@@ -34,8 +34,16 @@ class Home extends StatelessWidget {
                         Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text("Usuário: $name", textAlign: TextAlign.start),
-                            Text("Cidade: $city", textAlign: TextAlign.start)
+                            Text(
+                              "Usuário: $name",
+                              textAlign: TextAlign.start,
+                              style:
+                                  TextStyle(color: Colors.black, fontSize: 14),
+                            ),
+                            Text("Cidade: $city",
+                                textAlign: TextAlign.start,
+                                style: TextStyle(
+                                    color: Colors.black, fontSize: 14))
                           ],
                         )
                       ],

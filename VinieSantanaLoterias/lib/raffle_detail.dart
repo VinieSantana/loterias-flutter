@@ -1,3 +1,4 @@
+import 'package:VinieSantanaLoterias/custom_scaffold.dart';
 import 'package:VinieSantanaLoterias/home.dart';
 import 'package:flutter/material.dart';
 
@@ -74,34 +75,30 @@ class RaffleDetail extends StatelessWidget {
         ],
       ));
     }
-    return Scaffold(
-        appBar: AppBar(
-          title: Text("Resultado do Sorteio"),
-          backgroundColor: Color(barColor),
-        ),
-        body: Container(
-          child: Column(
-            children: [
-              Image.asset(logo),
-              Padding(
-                  padding: EdgeInsets.all(16),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Sorteio: $raffleNumber",
-                        style: TextStyle(
-                            fontSize: 16, fontWeight: FontWeight.bold),
-                      ),
-                      Text(
-                        "Data: $date",
-                        style: TextStyle(fontSize: 16),
-                      ),
-                    ],
-                  )),
-              Padding(padding: EdgeInsets.all(16), child: Wrap(children: list))
-            ],
-          ),
-        ));
+    return CustomScaffold(
+      "Resultados do sorteio",
+      Color(barColor),
+      Column(
+        children: [
+          Image.asset(logo),
+          Padding(
+              padding: EdgeInsets.all(16),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    "Sorteio: $raffleNumber",
+                    style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
+                  ),
+                  Text(
+                    "Data: $date",
+                    style: TextStyle(fontSize: 16),
+                  ),
+                ],
+              )),
+          Padding(padding: EdgeInsets.all(16), child: Wrap(children: list))
+        ],
+      ),
+    );
   }
 }
