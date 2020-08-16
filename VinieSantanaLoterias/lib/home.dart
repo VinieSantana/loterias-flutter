@@ -1,4 +1,4 @@
-import 'package:VinieSantanaLoterias/raffleDetail.dart';
+import 'package:VinieSantanaLoterias/raffle_detail.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
