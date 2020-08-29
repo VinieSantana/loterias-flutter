@@ -1,7 +1,7 @@
-import 'package:VinieSantanaLoterias/home.dart';
+import 'package:VinieSantanaLoterias/features/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:VinieSantanaLoterias/custom_text_field.dart';
+import 'package:VinieSantanaLoterias/components/custom_text_field.dart';
 
 class Login extends StatefulWidget {
   @override

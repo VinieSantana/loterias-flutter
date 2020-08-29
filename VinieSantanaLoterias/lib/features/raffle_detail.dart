@@ -1,6 +1,6 @@
-import 'package:VinieSantanaLoterias/custom_scaffold.dart';
-import 'package:VinieSantanaLoterias/home.dart';
+import 'package:VinieSantanaLoterias/components/custom_scaffold.dart';
 import 'package:flutter/material.dart';
+import 'package:VinieSantanaLoterias/models/raffle_model.dart';
 
 class RaffleDetail extends StatelessWidget {
   final String logo;
@@ -14,42 +14,6 @@ class RaffleDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var circleColor;
-    var textColor;
-    var barColor;
-
-    switch (raffleType) {
-      case Home.MEGA_SENA:
-        circleColor = 0xFF209869;
-        barColor = 0xFF209869;
-        textColor = 0xFFFFFFFF;
-        break;
-      case Home.LOTOFACIL:
-        textColor = 0xFF930989;
-        barColor = 0xFF930989;
-        circleColor = 0xFFFFFFFF;
-        break;
-      case Home.QUINA:
-        circleColor = 0xFF260085;
-        barColor = 0xFF260085;
-        textColor = 0xFFFFFFFF;
-        break;
-      case Home.LOTOMANIA:
-        textColor = 0xFFF78100;
-        barColor = 0xFFF78100;
-        circleColor = 0xFFFFFFFF;
-        break;
-      case Home.TIMEMANIA:
-        textColor = 0xFF049645;
-        circleColor = 0xFFFFF600;
-        barColor = 0xFF049645;
-        break;
-      default:
-        circleColor = 0xFF058CE1;
-        barColor = 0xFF058CE1;
-        textColor = 0xFFFFFFFF;
-    }
-
     List<Widget> list = new List<Widget>();
     for (var i = 0; i < result.length; i++) {
       list.add(new Stack(
@@ -61,7 +25,8 @@ class RaffleDetail extends StatelessWidget {
                 width: 50.0,
                 height: 50.0,
                 decoration: new BoxDecoration(
-                  color: Color(circleColor),
+                  color: Color(
+                      Raffle().getLayoutColors(raffleType)["circleColor"]),
                   shape: BoxShape.circle,
                 ),
               )),
@@ -70,14 +35,15 @@ class RaffleDetail extends StatelessWidget {
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color: Color(textColor)),
+                color:
+                    Color(Raffle().getLayoutColors(raffleType)["textColor"])),
           )
         ],
       ));
     }
     return CustomScaffold(
       title: "Resultados do sorteio",
-      barColor: Color(barColor),
+      barColor: Color(Raffle().getLayoutColors(raffleType)["barColor"]),
       child: Column(
         children: [
           Image.asset(logo),
