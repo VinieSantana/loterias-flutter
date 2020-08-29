@@ -1,6 +1,7 @@
 import 'package:VinieSantanaLoterias/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:VinieSantanaLoterias/custom_text_field.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -61,16 +62,14 @@ class _LoginState extends State<Login> {
                       width: size.width / 3,
                     ),
                     SizedBox(height: 20),
-                    TextField(
+                    CustomTextField(
                       controller: nameController,
-                      decoration: InputDecoration(
-                        labelText: "Insira o seu nome",
-                      ),
+                      placeholder: "Insira o seu nome",
                     ),
-                    TextField(
+                    SizedBox(height: 10),
+                    CustomTextField(
                       controller: cityController,
-                      decoration:
-                          InputDecoration(labelText: "Insira a sua cidade"),
+                      placeholder: "Insira sua cidade",
                     ),
                     SizedBox(
                         width: size.width,
