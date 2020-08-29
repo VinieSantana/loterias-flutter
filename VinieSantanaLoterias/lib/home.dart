@@ -17,73 +17,75 @@ class Home extends StatelessWidget {
     return CustomScaffold(
       title: "Últimos Resultados",
       barColor: null,
-      child: Container(
-        child: Column(
-          children: [
-            Container(
-                child: Padding(
-                    padding: EdgeInsets.all(16),
-                    child: Row(
-                      children: [
-                        Center(
-                            child: Image.asset(
-                          "assets/logo_secondary.png",
-                          width: 80,
-                        )),
-                        SizedBox(width: 20),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              "Usuário: $name",
-                              textAlign: TextAlign.start,
-                              style:
-                                  TextStyle(color: Colors.black, fontSize: 14),
-                            ),
-                            Text("Cidade: $city",
+      child: SafeArea(
+        child: Container(
+          child: Column(
+            children: [
+              Container(
+                  child: Padding(
+                      padding: EdgeInsets.all(16),
+                      child: Row(
+                        children: [
+                          Center(
+                              child: Image.asset(
+                            "assets/logo_secondary.png",
+                            width: 80,
+                          )),
+                          SizedBox(width: 20),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Usuário: $name",
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                    color: Colors.black, fontSize: 14))
-                          ],
-                        )
-                      ],
-                    ))),
-            Expanded(
-                child: ListView(
-              children: <Widget>[
-                RaffleItem(
-                  raffleType: MEGA_SENA,
-                  raffleNumber: "2289",
-                  date: "13/08/2020",
-                  results: MEGA_RESULTS,
-                ),
-                RaffleItem(
-                  raffleType: LOTOMANIA,
-                  raffleNumber: "2099",
-                  date: "11/08/2020",
-                  results: LOTOMANIA_RESULTS,
-                ),
-                RaffleItem(
-                  raffleType: QUINA,
-                  raffleNumber: "5539",
-                  date: "13/08/2020",
-                  results: QUINA_RESULTS,
-                ),
-                RaffleItem(
-                  raffleType: TIMEMANIA,
-                  raffleNumber: "1523",
-                  date: "13/08/2020",
-                  results: TIMEMANIA_RESULTS,
-                ),
-                RaffleItem(
-                  raffleType: LOTOFACIL,
-                  raffleNumber: "2289",
-                  date: "13/08/2020",
-                  results: LOTOFACIL_RESULTS,
-                ),
-              ],
-            )),
-          ],
+                                    color: Colors.black, fontSize: 14),
+                              ),
+                              Text("Cidade: $city",
+                                  textAlign: TextAlign.start,
+                                  style: TextStyle(
+                                      color: Colors.black, fontSize: 14))
+                            ],
+                          )
+                        ],
+                      ))),
+              Expanded(
+                  child: ListView(
+                children: <Widget>[
+                  RaffleItem(
+                    raffleType: MEGA_SENA,
+                    raffleNumber: "2289",
+                    date: "13/08/2020",
+                    results: MEGA_RESULTS,
+                  ),
+                  RaffleItem(
+                    raffleType: LOTOMANIA,
+                    raffleNumber: "2099",
+                    date: "11/08/2020",
+                    results: LOTOMANIA_RESULTS,
+                  ),
+                  RaffleItem(
+                    raffleType: QUINA,
+                    raffleNumber: "5539",
+                    date: "13/08/2020",
+                    results: QUINA_RESULTS,
+                  ),
+                  RaffleItem(
+                    raffleType: TIMEMANIA,
+                    raffleNumber: "1523",
+                    date: "13/08/2020",
+                    results: TIMEMANIA_RESULTS,
+                  ),
+                  RaffleItem(
+                    raffleType: LOTOFACIL,
+                    raffleNumber: "2289",
+                    date: "13/08/2020",
+                    results: LOTOFACIL_RESULTS,
+                  ),
+                ],
+              )),
+            ],
+          ),
         ),
       ),
     );
