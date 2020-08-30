@@ -62,7 +62,7 @@ class Raffle {
     }
   }
 
-  getLayoutColors(int raffleType) {
+  Map getLayoutColors(int raffleType) {
     switch (raffleType) {
       case MEGA_SENA:
         return {

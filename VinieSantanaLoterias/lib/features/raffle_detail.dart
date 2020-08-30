@@ -14,6 +14,7 @@ class RaffleDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    Map colors = Raffle().getLayoutColors(raffleType);
     List<Widget> list = new List<Widget>();
     for (var i = 0; i < result.length; i++) {
       list.add(new Stack(
@@ -25,8 +26,7 @@ class RaffleDetail extends StatelessWidget {
                 width: 50.0,
                 height: 50.0,
                 decoration: new BoxDecoration(
-                  color: Color(
-                      Raffle().getLayoutColors(raffleType)["circleColor"]),
+                  color: Color(colors["circleColor"]),
                   shape: BoxShape.circle,
                 ),
               )),
@@ -35,15 +35,14 @@ class RaffleDetail extends StatelessWidget {
             style: TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
-                color:
-                    Color(Raffle().getLayoutColors(raffleType)["textColor"])),
+                color: Color(colors["textColor"])),
           )
         ],
       ));
     }
     return CustomScaffold(
       title: "Resultados do sorteio",
-      barColor: Color(Raffle().getLayoutColors(raffleType)["barColor"]),
+      barColor: Color(colors["barColor"]),
       child: Column(
         children: [
           Image.asset(logo),
